@@ -1,0 +1,10 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  passthrough:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Passthrough
+        run: echo "Check passed!"

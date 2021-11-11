@@ -13,5 +13,12 @@ jobs:
       - name: Send a comment
         uses: JoseThen/comment-pr@v1.1.1
         with:
-          comment: "This is my comment because this was labeled"
+          comment: "Adding a Check because of the label"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Add check
+        uses: LouisBrunner/checks-action
+        with:
+          token: {{ secrets.GITHUB_TOKEN }}
+          name: "Test that this works"
+          status: "queued"

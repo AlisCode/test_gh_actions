@@ -1,0 +1,17 @@
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - labeled
+
+jobs:
+  add-github-check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send a comment
+        uses: JoseThen/comment-pr@v1.1.1
+        with:
+          comment: "This is my comment because this was labeled"
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

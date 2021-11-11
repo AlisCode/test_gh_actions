@@ -19,6 +19,6 @@ jobs:
       - name: Add check
         uses: LouisBrunner/checks-action@v1.1.1
         with:
-          token: {{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           name: "Test that this works"
           status: "queued"
